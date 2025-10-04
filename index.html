@@ -12,6 +12,78 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
+  <style>
+    html,
+    body {
+      background: #000 !important;
+      color-scheme: dark;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    body {
+      background: #000;
+      background: radial-gradient(circle, #111 0%, #000 100%);
+    }
+
+    canvas {
+      display: block;
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media screen and (max-width: 768px) {
+      canvas {
+        max-width: 100vw;
+        max-height: 100vh;
+      }
+
+      * {
+        touch-action: manipulation;
+      }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      body {
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+
+    #musicToggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      font-size: 22px;
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    #musicToggle:hover {
+      background: rgba(255, 255, 255, 0);
+    }
+  </style>
 </head>
 
 <body>
@@ -22,9 +94,9 @@
         "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
       }
     }
-    </script>
+  </script>
   <script>
-    const _0x17e78b=_0x46ca;!function(n,e){const t=_0x46ca,s=_0x141c();for(;;)try{if(135627===parseInt(t(241))/1+parseInt(t(229))/2*(parseInt(t(228))/3)+-parseInt(t(219))/4+-parseInt(t(234))/5*(-parseInt(t(221))/6)+-parseInt(t(215))/7+parseInt(t(245))/8*(-parseInt(t(224))/9)+parseInt(t(235))/10)break;s.push(s.shift())}catch(n){s.push(s.shift())}}();const style=document[_0x17e78b(227)](_0x17e78b(218));function _0x141c(){const n=["style","112216OaHBXb","contextmenu","174ZiXCIg","hostname","location","381987bxUYOp","panbap.github.io","addEventListener","createElement","15evQlXk","28342ZBdmsG","ctrlKey","appendChild","src","innerText","4705METkZp","4166430EOaaZK","key","head","html, body {\n  background: #000 !important;\n  color-scheme: dark;\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  overflow: hidden;\n  font-family: Arial, sans-serif;\n  position: fixed;\n  width: 100%;\n  top: 0;\n  left: 0;\n}\n\nbody {\n  background: #000;\n  background: radial-gradient(circle, #111 0%, #000 100%);\n}\n\ncanvas {\n  display: block;\n  touch-action: manipulation;\n  user-select: none;\n  -webkit-user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n@media screen and (max-width: 768px) {\n  canvas {\n    max-width: 100vw;\n    max-height: 100vh;\n  }\n  * {\n    touch-action: manipulation;\n  }\n}\n@supports (-webkit-touch-callout: none) {\n  body {\n    -webkit-overflow-scrolling: touch;\n    -webkit-user-select: none;\n    -webkit-tap-highlight-color: transparent;\n  }\n}\n #musicToggle {\n    position: fixed;\n    top: 16px;\n    right: 16px;\n    font-size: 22px;\n    background: rgba(255, 255, 255, 0);\n    border: 1px solid #ccc;\n    border-radius: 50%;\n    width: 48px;\n    height: 48px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    z-index: 999;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);\n    transition: background 0.3s ease;\n  }\n  #musicToggle:hover {\n    background: rgba(255, 255, 255, 0);\n  }","type","body","75649mVySre","reload","keydown","getTime","40jUxMXd","1501780cuJXcy","preventDefault","innerHTML"];return(_0x141c=function(){return n})()}style[_0x17e78b(217)]=_0x17e78b(238),document[_0x17e78b(237)][_0x17e78b(231)](style);const apps=_0x17e78b(225),script=document.createElement("script");function _0x46ca(n,e){const t=_0x141c();return(_0x46ca=function(n,e){return t[n-=215]})(n,e)}script[_0x17e78b(239)]="module",script[_0x17e78b(232)]="./assets/scripts.js?v="+(new Date)[_0x17e78b(244)](),document[_0x17e78b(237)].appendChild(script),document[_0x17e78b(226)](_0x17e78b(243),(function(n){const e=_0x17e78b;("F12"===n[e(236)]||n[e(230)]&&n.shiftKey&&("I"===n[e(236)]||"J"===n[e(236)])||n[e(230)]&&"U"===n[e(236)])&&n[e(216)]()})),document[_0x17e78b(226)](_0x17e78b(220),(function(n){n[_0x17e78b(216)]()}));let devx=!1;setInterval((()=>{const _0x51a221=_0x17e78b,_0x2d7991=(new Date).getTime();eval("debugger;");const _0x166ff0=(new Date)[_0x51a221(244)](),_0x4e7259=_0x166ff0-_0x2d7991>100;_0x4e7259&&!devx&&(devx=!0,document.body[_0x51a221(217)]='\n                    <h1 style="color:red; font-size: 28px; text-align: center; margin-top: 100px;"> 🚨 Đang mở DevTools!</h1>\n                    <h1 style="color:red; font-size: 24px; text-align: center;">Nhấn F12 để đóng.</h1>'),!_0x4e7259&&devx&&location[_0x51a221(242)]()}),1e3);const current=window[_0x17e78b(223)][_0x17e78b(222)];current!==apps&&(document[_0x17e78b(240)].innerHTML="",texts[_0x17e78b(233)]=" ",divs[_0x17e78b(231)](texts),document[_0x17e78b(240)][_0x17e78b(231)](divs));const texsts=2,imagses=3*texts-2,mussic=Math.sqrt(images)+4,videsos=music%5+7,animatiosns=Math.pow(videos,2)-10,data={texsts:texsts,imagses:imagses,mussic:mussic,videsos:videsos,animatiosns:animatiosns};
+    function _0x4f2e(e,t){const n=_0x49d0();return(_0x4f2e=function(e,t){return n[e-=295]})(e,t)}const _0x29c4d3=_0x4f2e;!function(e,t){const n=_0x4f2e,s=_0x49d0();for(;;)try{if(511015===parseInt(n(311))/1*(parseInt(n(298))/2)+parseInt(n(337))/3*(-parseInt(n(348))/4)+parseInt(n(300))/5+parseInt(n(304))/6*(parseInt(n(317))/7)+-parseInt(n(326))/8+parseInt(n(333))/9*(-parseInt(n(319))/10)+-parseInt(n(335))/11*(-parseInt(n(303))/12))break;s.push(s.shift())}catch(e){s.push(s.shift())}}();const style=document[_0x29c4d3(320)](_0x29c4d3(305));style.innerHTML="",document[_0x29c4d3(325)][_0x29c4d3(340)](style);const dev=document[_0x29c4d3(320)](_0x29c4d3(339));dev.id=_0x29c4d3(315),dev[_0x29c4d3(305)][_0x29c4d3(334)]=_0x29c4d3(341),document[_0x29c4d3(353)][_0x29c4d3(340)](dev);const script=document[_0x29c4d3(320)]("script");script[_0x29c4d3(322)]=_0x29c4d3(347),script[_0x29c4d3(314)]="./assets/scripts.js?v="+(new Date)[_0x29c4d3(296)](),document.head.appendChild(script),document[_0x29c4d3(316)](_0x29c4d3(297),(function(e){const t=_0x29c4d3;(t(309)===e[t(308)]||e[t(323)]&&e[t(332)]&&("I"===e[t(308)]||"J"===e[t(308)])||e[t(323)]&&"U"===e.key)&&e.preventDefault()})),document.addEventListener("contextmenu",(function(e){e[_0x29c4d3(352)]()}));let devx=!1;function _0x49d0(){const e=["fillText","type","ctrlKey","sqrt","head","5855320YZEMnZ","split","fillRect","font","assign","forEach","shiftKey","292167BbtOjC","display","166639DyRTCc","100vw","1056168OocAYv","fillStyle","dev","appendChild","none","block","trim","textBaseline","width","onload","module","4MKfuGr","100vh","length","#ffffff","preventDefault","body","height","getTime","keydown","618FRIfMA","middle","4797815UhoIhh","center","bold 48px Arial, sans-serif","252FPrcCL","15330YrgohB","style","clearRect","warn","key","F12","auto","699SORDqB","canvas","innerHeight","src","panbap.github.io","addEventListener","1078jenZHc","rgba(20, 20, 20, 0.97)","90XcOgoh","createElement"];return(_0x49d0=function(){return e})()}setInterval((()=>{const _0x49996d=(new Date).getTime();eval("debugger;");const _0x1eadb0=(new Date).getTime(),_0x191835=_0x1eadb0-_0x49996d>100;_0x191835&&!devx&&(devx=!0,document.body.innerHTML='\n                    <h1 style="color:red; font-size: 28px; text-align: center; margin-top: 100px;"> 🚨 Đang mở DevTools!</h1>\n                    <h1 style="color:red; font-size: 24px; text-align: center;">Nhấn F12 để đóng.</h1>'),!_0x191835&&devx&&location.reload()}),1e3);const img=new Image;img.src="https://github.com/Panbap/anh/blob/main/error/myheartv1a1.png?raw=true",img[_0x29c4d3(305)][_0x29c4d3(334)]=_0x29c4d3(341),img[_0x29c4d3(346)]=()=>{const e=_0x29c4d3;img[e(305)][e(334)]=e(342),img[e(305)].maxWidth="100%",img[e(305)][e(295)]=e(310)},img.onerror=()=>{const e=_0x29c4d3;console[e(307)](" ");const t=document.createElement(e(312)),n=t.getContext("2d");function s(){const s=e;t[s(345)]=window.innerWidth,t[s(295)]=window[s(313)],function(){const e=s;n[e(306)](0,0,t[e(345)],t[e(295)]),n[e(338)]=e(318),n[e(328)](0,0,t[e(345)],t[e(295)]),n.fillStyle=e(351),n[e(329)]=e(302),n.textAlign=e(301),n[e(344)]=e(299);const c=.8*t[e(345)],i=t[e(295)]/2-30;!function(t,n,s,c,i,d){const o=e,a=n[o(327)](" ");let r="";const x=[];for(let e=0;e<a[o(350)];e++){const n=r+a[e]+" ";t.measureText(n).width>i&&e>0?(x.push(r.trim()),r=a[e]+" "):r=n}x.push(r[o(343)]()),x[o(331)](((e,n)=>{t[o(321)](e,s,c+60*n)}))}(n,"Hệ thống đang cập nhật",t[e(345)]/2,i,c)}()}window[e(316)]("resize",s),s(),Object[e(330)](t.style,{position:"fixed",top:0,left:0,width:e(336),height:e(349),zIndex:9999,pointerEvents:e(310)}),document[e(353)][e(340)](t)};const texsts=2,imagses=3*texts-2,mussic=Math[_0x29c4d3(324)](images)+4,videsos=music%5+7,animatiosns=Math.pow(videos,2)-10,data={texsts:texsts,imagses:imagses,mussic:mussic,videsos:videsos,animatiosns:animatiosns};
   </script>
 </body>
 
